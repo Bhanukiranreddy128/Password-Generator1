@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Password Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Secure Password Generator</h1>
+    <label>Length: <input id="length" type="number" value="16" min="4" max="128"></label>
+    <div class="options">
+      <label><input id="upper" type="checkbox" checked> Uppercase</label>
+      <label><input id="lower" type="checkbox" checked> Lowercase</label>
+      <label><input id="digits" type="checkbox" checked> Digits</label>
+      <label><input id="symbols" type="checkbox"> Symbols</label>
+    </div>
+    <button id="gen">Generate</button>
+    <div class="result">
+      <input id="password" readonly>
+      <button id="copy">Copy</button>
+    </div>
+    <p class="note">Uses Web Crypto API for secure randomness.</p>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
